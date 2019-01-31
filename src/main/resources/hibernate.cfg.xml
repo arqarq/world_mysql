@@ -1,0 +1,26 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--<property name = "hibernate.connection.driver_class">-->
+        <!--com.mysql.jdbc.Driver-->
+        <!--</property>-->
+
+        <property name="hibernate.connection.url">
+            <!--jdbc:mysql://localhost:3306/world_x&lt;!&ndash;?serverTimezone=CET&amp;useSSL=true&ndash;&gt;-->
+            jdbc:mysql://localhost:3306/world_x?useTimezone=true&amp;serverTimezone=CET&amp;useLegacyDatetimeCode=false&amp;useSSL=true
+        </property>
+        <property name="hibernate.connection.username">arqarq</property>
+        <property name="hibernate.connection.password">123456</property>
+
+        <!--<property name="show_sql">true</property>-->
+        <!--<property name="format_sql">true</property>-->
+
+        <mapping class="world.model.City"/><!--klasy mapujące tutaj-->
+        <mapping class="world.model.Country"/>
+        <mapping class="world.model.CountryLanguage"/>
+    </session-factory>
+</hibernate-configuration>
