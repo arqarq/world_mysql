@@ -11,10 +11,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
+import static org.jboss.logging.Logger.getLogger;
+
 public class DisplayLanguages15 {
     public static void main(String[] args) {
         @SuppressWarnings("unused")
-        org.jboss.logging.Logger logger = Logger.getLogger("org.hibernate");
+        Logger logger = getLogger("org.hibernate");
         java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
 
         try (SessionFactory factory = new Configuration().configure().buildSessionFactory();
